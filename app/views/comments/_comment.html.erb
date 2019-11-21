@@ -1,0 +1,15 @@
+<% unless comment.new_record? %>
+  <p>
+    <strong>Commenter:</strong>
+    <%= comment.commenter %>
+  </p>
+  <p>
+    <strong>Body:</strong>
+    <%= comment.body %>
+  </p>
+<% end %>
+<p>
+<%= link_to 'Destroy Comment', [comment.article, comment],
+            method: :delete,
+            data: { confirm: 'Are you Sure?' } %>
+</p>
